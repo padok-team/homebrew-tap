@@ -11,7 +11,7 @@ class Tfautomv < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "1a09ad65ed3c292a9928f5bfceaecca9601ed218c013b637e3af3fafa9a6a6cb"
+      sha256 "538d81b6dc8bdf01ee9a2599268df0cb8c47a46831203e4b92dcea1e3847d72e"
 
       def install
         bin.install "tfautomv"
@@ -19,7 +19,7 @@ class Tfautomv < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "2891e484a91480b9cca049d0415e1e8d307c1f0217ed7171097c317294b75098"
+      sha256 "52c4ffc52a7d9da8146c55bc8790b1aca2b695f0fe62a08c3bdba7adc8224768"
 
       def install
         bin.install "tfautomv"
@@ -28,17 +28,17 @@ class Tfautomv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_arm64.tar.gz"
-      sha256 "9c719a9ac19ba0de477d411a1ac692e6579dfbe910612f94fbed24541ccfaf8e"
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "17343643fa4cb6a0be8c89438e61aa9d31adc66c814b959ed7c042e7b11ab5d0"
 
       def install
         bin.install "tfautomv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "c45a776469dbbe5fa27b3fd84d1d8f0d056919394156541f3e89c3d40802d244"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_arm64.tar.gz"
+      sha256 "0e19470be09157286b55b5caf9e85238f57983ab004e2159aca6cc9e959616c8"
 
       def install
         bin.install "tfautomv"
