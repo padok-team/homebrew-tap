@@ -5,21 +5,21 @@
 class Tfautomv < Formula
   desc "Generate Terraform moved blocks automatically for painless refactoring"
   homepage "https://github.com/padok-team/tfautomv"
-  version "0.3.1"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.3.1/tfautomv_0.3.1_Darwin_arm64.tar.gz"
-      sha256 "9eda85432822109f4322c05dda6185107e9e171a72dbd8526aee63e14af521f9"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "1a09ad65ed3c292a9928f5bfceaecca9601ed218c013b637e3af3fafa9a6a6cb"
 
       def install
         bin.install "tfautomv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.3.1/tfautomv_0.3.1_Darwin_x86_64.tar.gz"
-      sha256 "e5d8331cd2eb3078cd2678971c0bb527a809634ef8f3909788db5854da28eb53"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "2891e484a91480b9cca049d0415e1e8d307c1f0217ed7171097c317294b75098"
 
       def install
         bin.install "tfautomv"
@@ -29,16 +29,16 @@ class Tfautomv < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.3.1/tfautomv_0.3.1_Linux_arm64.tar.gz"
-      sha256 "c76147ba1f3fe7a6b92ac9cf5bc83197759c2be3240112b75c7b7463c182ef99"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_arm64.tar.gz"
+      sha256 "9c719a9ac19ba0de477d411a1ac692e6579dfbe910612f94fbed24541ccfaf8e"
 
       def install
         bin.install "tfautomv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.3.1/tfautomv_0.3.1_Linux_x86_64.tar.gz"
-      sha256 "a53f5e7e06f6f380ad2ef3fd18ee214963f2bcb6e7c02895b894985a8b3a6228"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "c45a776469dbbe5fa27b3fd84d1d8f0d056919394156541f3e89c3d40802d244"
 
       def install
         bin.install "tfautomv"
