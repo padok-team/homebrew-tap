@@ -5,21 +5,21 @@
 class Tfautomv < Formula
   desc "Generate Terraform moved blocks automatically for painless refactoring"
   homepage "https://github.com/padok-team/tfautomv"
-  version "0.4.0"
+  version "0.4.1-rc1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_arm64.tar.gz"
-      sha256 "538d81b6dc8bdf01ee9a2599268df0cb8c47a46831203e4b92dcea1e3847d72e"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1-rc1/tfautomv_0.4.1-rc1_Darwin_arm64.tar.gz"
+      sha256 "3d04d025f8abf15673b1a92cf39b06b31d7395e625def7547872565867e398cc"
 
       def install
         bin.install "tfautomv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Darwin_x86_64.tar.gz"
-      sha256 "52c4ffc52a7d9da8146c55bc8790b1aca2b695f0fe62a08c3bdba7adc8224768"
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1-rc1/tfautomv_0.4.1-rc1_Darwin_x86_64.tar.gz"
+      sha256 "52f93b32e6833bf5e93268875743eeedee3483a31a13c2a403000f3aade319a8"
 
       def install
         bin.install "tfautomv"
@@ -28,17 +28,17 @@ class Tfautomv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_x86_64.tar.gz"
-      sha256 "17343643fa4cb6a0be8c89438e61aa9d31adc66c814b959ed7c042e7b11ab5d0"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1-rc1/tfautomv_0.4.1-rc1_Linux_arm64.tar.gz"
+      sha256 "b2ec4b32268844106a5bf1eb8a5e94b51326c22ba696700980bcffeade1b17a5"
 
       def install
         bin.install "tfautomv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.0/tfautomv_0.4.0_Linux_arm64.tar.gz"
-      sha256 "0e19470be09157286b55b5caf9e85238f57983ab004e2159aca6cc9e959616c8"
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1-rc1/tfautomv_0.4.1-rc1_Linux_x86_64.tar.gz"
+      sha256 "c45a41ad4af3767a5787465cba262487cf6bfb21a69d38fc2bfffaaf8c50da8c"
 
       def install
         bin.install "tfautomv"
