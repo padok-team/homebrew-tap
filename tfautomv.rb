@@ -9,17 +9,17 @@ class Tfautomv < Formula
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Darwin_arm64.tar.gz"
-      sha256 "1c02f74cff6bb65bb071601a79d6f782fd9d0fb99208a27546e4f3aa8efdfbd4"
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Darwin_x86_64.tar.gz"
+      sha256 "e87f440e573ee48419d46cb0ca208a08c419532e13ab9513e1279c79381d8167"
 
       def install
         bin.install "tfautomv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Darwin_x86_64.tar.gz"
-      sha256 "82b6a2d487dc4ad4bfb462b0558c9ef71571226123b4aef1a5b058cccd391de1"
+    if Hardware::CPU.arm?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Darwin_arm64.tar.gz"
+      sha256 "5fbf759f33a2c6a7952895c64ab3dc5da275aeae94e1d1575e33ea95c24a38b1"
 
       def install
         bin.install "tfautomv"
@@ -28,17 +28,17 @@ class Tfautomv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Linux_x86_64.tar.gz"
-      sha256 "9e62720368be06cc758907fd02bfa0be5c769cffdecc3b8e29654e8f06981021"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Linux_arm64.tar.gz"
+      sha256 "0642415742a5ed028a33e719a3191c70bc8320d37764a52e65e7b6dcbb47a717"
 
       def install
         bin.install "tfautomv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Linux_arm64.tar.gz"
-      sha256 "7a3c12cd47ecfbe0d39d19fd042c123d25e4cd6ab9686190de79a39be14e2fbd"
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/tfautomv/releases/download/v0.4.1/tfautomv_0.4.1_Linux_x86_64.tar.gz"
+      sha256 "68365e6e1a743fbac722e46f39066473684afa9797cdd99f6f2c5c4c9659449d"
 
       def install
         bin.install "tfautomv"
