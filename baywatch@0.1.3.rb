@@ -9,17 +9,17 @@ class BaywatchAT013 < Formula
   version "0.1.3"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0a54aca6595279052cd07b5d5767429f1259f50af017213c384c4085ee01f095"
+    if Hardware::CPU.arm?
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "47d3b7c4a6fd69877760d78c1560e1487f9653a1e35cb1c31e152bca9087f79e"
 
       def install
         bin.install "baywatch"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "b1235d3daeff22a43dac90fc99b826523aee97f24ee6a4797952505642c02367"
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "60c616d6fd2ae0827a17c52a013495371cdde13ae6497bd69d39c2786ff9cfa6"
 
       def install
         bin.install "baywatch"
@@ -30,7 +30,7 @@ class BaywatchAT013 < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "3f6534b31fe10dba89483a3350a846e71751949954b6884428ad24a86cdc34c0"
+      sha256 "d9857ff4c7f65572657b72b43498980ca43f33c9cfe4bd1ef5ccdad9236d2abb"
 
       def install
         bin.install "baywatch"
@@ -38,7 +38,7 @@ class BaywatchAT013 < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/padok-team/baywatch/releases/download/v0.1.3/baywatch_0.1.3_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "44e72036858cc42ec408794a4c000f520d99a53c8cdbf3c7c3903f1ba9521eae"
+      sha256 "cd13469c2138bb3661504a95022a57b17a1c70437755f79d4dc6268b960fcec6"
 
       def install
         bin.install "baywatch"
