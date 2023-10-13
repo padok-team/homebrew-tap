@@ -9,16 +9,16 @@ class Playground < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Darwin_arm64.tar.gz"
-      sha256 "da7f4830b94fe360709e5263decbc39fa3229dce0541a501623cfc8895b3b9ad"
+      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "1780ef08a1a991aa3267232a4de9f9484935b5ffe59fc0b06fb0a22594548e4e"
 
       def install
         bin.install "playground"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Darwin_x86_64.tar.gz"
-      sha256 "ee93fbc09382083811135b6101a7d639aabf1c8e5ba5c81bb398a178b654a5e6"
+      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Darwin_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "965fc3baf0f5d3e8fd60cd934c1e66e01ba9a3afbf04f0ceaac5a1bcffb53de3"
 
       def install
         bin.install "playground"
@@ -28,16 +28,16 @@ class Playground < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Linux_arm64.tar.gz"
-      sha256 "5f5ba75aefc1060799745b12604c3cafdb6b9c1fc66404c11f80e19fb8545a60"
+      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "9ae668501bedeb631b47e7acb4b5f106db9cf8830c43fa8200189745a03c5dea"
 
       def install
         bin.install "playground"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Linux_x86_64.tar.gz"
-      sha256 "5802fd524e1cfc2ac13aae2d128383cfb6e168de38f2b65f3ad28730285a9f0f"
+      url "https://github.com/padok-team/playground/releases/download/v0.1.1/playground_Linux_x86_64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "248add41a9539285a95d1ea378d3ea1d96b15252b1513e3c7f9b85abb54a4a3b"
 
       def install
         bin.install "playground"
