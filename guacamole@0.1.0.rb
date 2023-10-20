@@ -12,7 +12,7 @@ class GuacamoleAT010 < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc14/guacamole_0.1.0-rc14_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "266db51a732ec16df5f151790eec55b3f81d19dbb070fbe3a3d102d051d4478a"
+      sha256 "0e45f51dc1eda594ee01ae790c34ad9b11dde478e20beacaf22c24f74ca413e0"
 
       def install
         bin.install "guacamole"
@@ -20,7 +20,7 @@ class GuacamoleAT010 < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc14/guacamole_0.1.0-rc14_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "c9c759ba8f54af3c386c08124fb8d57a7be83018914b658567479af51f6f9ffe"
+      sha256 "7c71f220acfb79320a607b746d400de61d4869269dd3adedca08e7c1f1176987"
 
       def install
         bin.install "guacamole"
