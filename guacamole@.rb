@@ -6,21 +6,21 @@ require_relative "download_strategy"
 class GuacamoleAT < Formula
   desc ""
   homepage "https://github.com/padok-team/guacamole"
-  version "0.1.0-rc8"
+  version "0.1.0-rc9"
   depends_on :linux
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc8/guacamole_0.1.0-rc8_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "02e6beac7d115a29188ff6b6d2fe44fe328a5a716d3bbb2c38cd33b58060bcd8"
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc9/guacamole_0.1.0-rc9_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "990ea0ecef03fee5e26b0b3dab2d85d1ea965752b1bb359d7b12eceaa57a7062"
 
       def install
         bin.install "guacamole"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc8/guacamole_0.1.0-rc8_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "c0b0346204c5e6c40a0f40c987b79bd73083243732e3d001247ca1809130262d"
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0-rc9/guacamole_0.1.0-rc9_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "6d874b0810c661f9679743ec20de39abde2c41af655d3387bd8a03dded1a86bc"
 
       def install
         bin.install "guacamole"
