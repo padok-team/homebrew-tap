@@ -6,21 +6,39 @@ require_relative "download_strategy"
 class Guacamole < Formula
   desc ""
   homepage "https://github.com/padok-team/guacamole"
-  version "0.1.0"
-  depends_on :linux
+  version "0.1.1"
 
-  on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0/guacamole_0.1.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "3e57b4904c305be70282811472e4ab85c68ff2ba4c3919a3da5bec9c6b466570"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.1/guacamole_0.1.1_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "86141fdba126b9dc5fa20b9827e058fb3d25f4166b7a0e10e38144b12ff580bb"
 
       def install
         bin.install "guacamole"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.1.0/guacamole_0.1.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "201923cdfd09c593cabcca3f99a273d12074d7cf60e470a2f33bd92b3483d92e"
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.1/guacamole_0.1.1_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "69040aa793511d118fc131734207fabc80a65c4034e37c2ebd58afdbf99add77"
+
+      def install
+        bin.install "guacamole"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.1/guacamole_0.1.1_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "5ed48951f8eee08e9069907e8cc468e0c7dcfd1556d967608d7090919189e208"
+
+      def install
+        bin.install "guacamole"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/padok-team/guacamole/releases/download/v0.1.1/guacamole_0.1.1_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "ac8fa8df69bdd0444e122c626a3fda999df677dfe0f80cea6b2971a2ff7a3fda"
 
       def install
         bin.install "guacamole"
