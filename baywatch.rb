@@ -6,20 +6,20 @@ require_relative "download_strategy"
 class Baywatch < Formula
   desc ""
   homepage "https://github.com/padok-team/baywatch"
-  version "0.1.5"
+  version "0.1.6"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.5/baywatch_0.1.5_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "4fcd8854da8304acc75a28895c4d6a1ff406fa6406dd46ed0849de2816a7e527"
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.6/baywatch_0.1.6_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "e1f8cf4b4747cd70c4e5cf771ea1b55b39d9babd8ad9a6f5935f132b95529d23"
 
       def install
         bin.install "baywatch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.5/baywatch_0.1.5_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "bc2b3261c7b57ce5a084a266faa5cf115caa8308c6b6a91a74ddbe4d8abb7926"
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.6/baywatch_0.1.6_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "0c93287714757d50ac8fd03d5251e3be44a21bcec05d4be6e225725f31f6efa0"
 
       def install
         bin.install "baywatch"
@@ -29,16 +29,16 @@ class Baywatch < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.5/baywatch_0.1.5_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "a69e35a2a19188ab70ad87754e52502143c790ffe791af1deaf81487e038bfb8"
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.6/baywatch_0.1.6_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "b843fefdda7d1cd9e7055434338bd788d20c8aa24871c7ce0ecfd5021ca1fde2"
 
       def install
         bin.install "baywatch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/padok-team/baywatch/releases/download/v0.1.5/baywatch_0.1.5_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "87ecdec5c6c8fb0b065a640e00a4fc520ea6899bdd5eb8fdc6deb56137d0b33e"
+      url "https://github.com/padok-team/baywatch/releases/download/v0.1.6/baywatch_0.1.6_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
+      sha256 "f9c55d8271da4cd1c30191e54af761cef8af84cd24db3ac5ee53764d58aa62d2"
 
       def install
         bin.install "baywatch"
