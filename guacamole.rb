@@ -5,20 +5,20 @@
 class Guacamole < Formula
   desc ""
   homepage "https://github.com/padok-team/guacamole"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.2.0/guacamole_0.2.0_darwin_amd64.tar.gz"
-      sha256 "3ad12995de2103e6502cb407893a976de4ffcf20beb027142b3bdc658acabd20"
+    on_intel do
+      url "https://github.com/padok-team/guacamole/releases/download/v0.3.0/guacamole_0.3.0_darwin_amd64.tar.gz"
+      sha256 "90106659ffc95a7d8f52df39203e61d407bbadf5e810843ba8f741e7127a093a"
 
       def install
         bin.install "guacamole"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.2.0/guacamole_0.2.0_darwin_arm64.tar.gz"
-      sha256 "74d93b8115e5ab5f5e3c629b3652f11f0395ace30d0997273cd8b302c9b8a4d6"
+    on_arm do
+      url "https://github.com/padok-team/guacamole/releases/download/v0.3.0/guacamole_0.3.0_darwin_arm64.tar.gz"
+      sha256 "f0727d31d5858d36725c879d70a137e1ab247a2e936d1d7a71433c5437546f6f"
 
       def install
         bin.install "guacamole"
@@ -27,20 +27,24 @@ class Guacamole < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.2.0/guacamole_0.2.0_linux_amd64.tar.gz"
-      sha256 "e2cad958890c4f720edd0cd1fa28fd830cac78e5480e9c18d609096965dd7daf"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/padok-team/guacamole/releases/download/v0.3.0/guacamole_0.3.0_linux_amd64.tar.gz"
+        sha256 "9e57e037c66284373b52a1b8c3518f7e30d1967da001eb74fef6687ab4f88665"
 
-      def install
-        bin.install "guacamole"
+        def install
+          bin.install "guacamole"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/padok-team/guacamole/releases/download/v0.2.0/guacamole_0.2.0_linux_arm64.tar.gz"
-      sha256 "88c15e4cad25f502834600e73114c91591dfc2c99263a5e66e2fc08fdc0841a4"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/padok-team/guacamole/releases/download/v0.3.0/guacamole_0.3.0_linux_arm64.tar.gz"
+        sha256 "d56fb08ee6d2f91cc68ff5ac830bf7e9028cda552847604d85fdb5bea48fad67"
 
-      def install
-        bin.install "guacamole"
+        def install
+          bin.install "guacamole"
+        end
       end
     end
   end
