@@ -5,20 +5,20 @@
 class GitSecretScanner < Formula
   desc ""
   homepage "https://github.com/padok-team/git-secret-scanner"
-  version "0.5.1"
+  version "0.5.2"
 
   on_macos do
     on_intel do
-      url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.1/git-secret-scanner_0.5.1_darwin_amd64.tar.gz"
-      sha256 "39e00cf9f74814c194c774a35678d7497d14a30c22799c4e2c2e37d18587f073"
+      url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.2/git-secret-scanner_0.5.2_darwin_amd64.tar.gz"
+      sha256 "1044b571109483bb7670c13d86379a4907d27ea4565c201653b4f53ab5706b55"
 
       def install
         bin.install "git-secret-scanner"
       end
     end
     on_arm do
-      url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.1/git-secret-scanner_0.5.1_darwin_arm64.tar.gz"
-      sha256 "bf9924b204cc77c7d2ccc47c1e992773b945b0c31c7c32a19b93ce87615f0988"
+      url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.2/git-secret-scanner_0.5.2_darwin_arm64.tar.gz"
+      sha256 "9baa83da428549882591db9738d78917dd715621c2808ad503c2e0193aeb6977"
 
       def install
         bin.install "git-secret-scanner"
@@ -29,8 +29,8 @@ class GitSecretScanner < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.1/git-secret-scanner_0.5.1_linux_amd64.tar.gz"
-        sha256 "b4e49d6c57331a994e840d2178905e846d8f143874bd0f2affab174b824ae5b6"
+        url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.2/git-secret-scanner_0.5.2_linux_amd64.tar.gz"
+        sha256 "880c119c92adf2d33db1561c7dad1507a44b158da4fc0507c5804ff82bbb7d93"
 
         def install
           bin.install "git-secret-scanner"
@@ -39,8 +39,8 @@ class GitSecretScanner < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.1/git-secret-scanner_0.5.1_linux_arm64.tar.gz"
-        sha256 "c818c61d9e05e3ede2f5f403dd377536887b7237038dd1f93bc363a8a05708f5"
+        url "https://github.com/padok-team/git-secret-scanner/releases/download/v0.5.2/git-secret-scanner_0.5.2_linux_arm64.tar.gz"
+        sha256 "ff2e0b9cf6029bc4d5857f27f7a9ef172f6f89f83876350545915f553b03c473"
 
         def install
           bin.install "git-secret-scanner"
