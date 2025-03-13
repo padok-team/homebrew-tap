@@ -11,7 +11,7 @@ class Baywatchdog@v010 < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/padok-team/baywatchdog/releases/download/v0.1.0/baywatchdog_0.1.0_darwin_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "84ee5cd0ff3a570ec70577fe5b4d2005cb4d8c20d7459e493cd34d9e7d4dc542"
+      sha256 "ca73a0bb92a2eddfae9c163a357a33e0dcd1898f696bc2fc2cecaa48887ddef6"
 
       def install
         bin.install "baywatchdog"
@@ -19,7 +19,7 @@ class Baywatchdog@v010 < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/padok-team/baywatchdog/releases/download/v0.1.0/baywatchdog_0.1.0_darwin_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-      sha256 "0e7d1ac9ff1a12725ffac7e70087605a5aab7f5254fece7a21957197e9e477c9"
+      sha256 "56d7b8b354e1b7e4e5015742d9a7193133f025c0609385ca8fd3f2970d96265b"
 
       def install
         bin.install "baywatchdog"
@@ -31,7 +31,7 @@ class Baywatchdog@v010 < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/padok-team/baywatchdog/releases/download/v0.1.0/baywatchdog_0.1.0_linux_amd64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "45a7a75c78f8051fe8e33ce97038ea7b3e96d6f4614d4ec6ef334b1e3d41bb97"
+        sha256 "349f1ef98701eb724f1b9c2e8151b4577e2fe412c1281b93253a5018f8f9f5fa"
 
         def install
           bin.install "baywatchdog"
@@ -41,7 +41,7 @@ class Baywatchdog@v010 < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/padok-team/baywatchdog/releases/download/v0.1.0/baywatchdog_0.1.0_linux_arm64.tar.gz", using: GitHubPrivateRepositoryReleaseDownloadStrategy
-        sha256 "d66436d756e8e08374d7559ac9263c67ed2826fbb48f94bcd08d4ed2e8dbdeda"
+        sha256 "eeae7900793495aaf44dbc0c7d58531027597d7edd946f663d0fc946915b020a"
 
         def install
           bin.install "baywatchdog"
